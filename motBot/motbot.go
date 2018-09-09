@@ -29,6 +29,8 @@ func main() {
 	port := os.Args[1]
 	http.HandleFunc("/", serveIndex)
 	discord, err := discordgo.New("Bot NDg3ODYxMzk3MDIwMjEzMjYw.DnT0EQ.QGNYEbnlP-R0Upt6LdmJBzBT_44")
+	// Btoken regenerated:
+
 	errCheck("error creating discord session", err)
 	errCheck("error retrieving account", err)
 	discord.AddHandler(messageCreate)
